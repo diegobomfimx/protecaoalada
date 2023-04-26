@@ -125,6 +125,9 @@ body {
   overflow-y: scroll;
   grid-column: 2;
 }
+.aves-lista li {
+  cursor: pointer;
+}
 
 .aves-lista::-webkit-scrollbar {
   width: 18px;
@@ -152,6 +155,7 @@ body {
   font-size: 1.125rem;
   margin-bottom: 0.5rem;
   color: #283023;
+  cursor: pointer;
 }
 
 .faq-lista dt::before {
@@ -246,4 +250,67 @@ body {
     display: flex;
     justify-content: center;
   }
+}
+
+/* js */
+
+.js .js-tabcontent section {
+  display: none;
+}
+
+.js-tabcontent section.ativo {
+  display: block !important;
+  animation: show 0.5s forwards;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    transform: translate3d(-30px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0px, 0, 0);
+  }
+}
+
+.js .js-acordeon dd {
+  display: none;
+}
+
+.js-acordeon dt::after {
+  content: "⬎";
+  margin-left: 10px;
+}
+
+.js-acordeon dt.ativo::after {
+  content: "⬏";
+}
+
+.js-acordeon dd.ativo {
+  display: block;
+  animation: slideDown 0.5s forwards;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+
+  to {
+    max-height: 200px;
+    opacity: 1;
+  }
+}
+
+.js .js-scroll {
+  opacity: 0;
+  transform: translate3d(-30px, 0, 0);
+  transition: 0.3s;
+}
+
+.js .js-scroll.ativo {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
 }
