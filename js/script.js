@@ -1,7 +1,7 @@
 import Acordeon from "./modules/acordeon-anime.js";
 import ScrollSuave from "./modules/scroll-suave.js";
 import TabNav from "./modules/tab-nav.js";
-import initModal from "./modules/modal.js";
+import Modal from "./modules/modal.js";
 import initDropdownMenu from "./modules/dropdown-menu.js";
 import initMenuMobile from "./modules/menu-mobile.js";
 import initFuncionamento from "./modules/funcionamento.js";
@@ -21,7 +21,13 @@ const tabNav = new TabNav(
 );
 tabNav.init();
 
-initModal();
+const modal = new Modal(
+  '[data-modal="container"]',
+  '[data-modal="abrir"]',
+  '[data-modal="fechar"]'
+);
+modal.init();
+
 initDropdownMenu();
 initMenuMobile();
 initFuncionamento();
