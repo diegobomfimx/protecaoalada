@@ -1,19 +1,26 @@
-export default function initAcordeon() {
-  const listaAcordeon = document.querySelectorAll('[data-anime="acordeon"] dt');
-
-  const classeAtivo = "ativo";
-
-  function acordeonAtivo() {
-    this.classList.toggle(classeAtivo);
-    this.nextElementSibling.classList.toggle(classeAtivo);
+export default class Acordeon {
+  constructor(list) {
+    this.listaAcordeon = document.querySelectorAll(list);
+    this.classeAtivo = "ativo";
   }
 
-  if (listaAcordeon.length) {
-    listaAcordeon[0].classList.add(classeAtivo);
-    listaAcordeon[0].nextElementSibling.classList.add(classeAtivo);
+  acordeonToggle(item) {
+    item.classList.toggle(this.classeAtivo);
+    item.nextElementSibling.classList.toggle(this.classeAtivo);
+  }
 
-    listaAcordeon.forEach((item) => {
-      item.addEventListener("click", acordeonAtivo);
+  // adiciona os eventos ao acordeon
+  addAcordeonEvent() {
+    this.listaAcordeon.forEach((item) => {
+      item.addEventListener("click", () => this.acordeonToggle(item));
     });
+  }
+
+  // iniciar função
+  init() {
+    if (this.listaAcordeon.length) {
+      this.acordeonToggle(this.listaAcordeon[0]);
+      this.addAcordeonEvent();
+    }
   }
 }
