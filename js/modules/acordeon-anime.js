@@ -22,5 +22,6 @@ export default class Acordeon {
       this.acordeonToggle(this.listaAcordeon[0]);
       this.addAcordeonEvent();
     }
+    return this;
   }
 }
