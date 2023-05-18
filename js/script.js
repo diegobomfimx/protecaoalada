@@ -1,87 +1,21 @@
-function initTabNav() {
-  const tabMenu = document.querySelectorAll(".js-tabmenu li");
-  const tabContent = document.querySelectorAll(".js-tabcontent section");
-
-  if (tabMenu.length && tabContent.length) {
-    tabContent[0].classList.add("ativo");
-
-    function tabAtiva(index) {
-      tabContent.forEach((conteudo) => {
-        conteudo.classList.remove("ativo");
-      });
-      tabContent[index].classList.add("ativo");
-    }
-
-    tabMenu.forEach((itemMenu, index) => {
-      itemMenu.addEventListener("click", () => {
-        tabAtiva(index);
-      });
-    });
-  }
-}
-
-initTabNav();
-
-function initAcordeon() {
-  const listaAcordeon = document.querySelectorAll(".js-acordeon dt");
-
-  const classeAtivo = "ativo";
-
-  if (listaAcordeon.length) {
-    listaAcordeon[0].classList.add(classeAtivo);
-    listaAcordeon[0].nextElementSibling.classList.add(classeAtivo);
-
-    function acordeonAtivo() {
-      this.classList.toggle(classeAtivo);
-      this.nextElementSibling.classList.toggle(classeAtivo);
-    }
-
-    listaAcordeon.forEach((item) => {
-      item.addEventListener("click", acordeonAtivo);
-    });
-  }
-}
+import initAcordeon from "./modules/acordeon-anime.js";
+import initTabNav from "./modules/tab-nav.js";
+import initScrollSuave from "./modules/scroll-suave.js";
+import initAnimacaoScroll from "./modules/animacao-scroll.js";
+import initModal from "./modules/modal.js";
+import initDropdownMenu from "./modules/dropdown-menu.js";
+import initMenuMobile from "./modules/menu-mobile.js";
+import initFuncionamento from "./modules/funcionamento.js";
+import initFetchAnimais from "./modules/fetch-animais.js";
+import initBtcPreco from "./modules/fetch-bitcoin.js";
 
 initAcordeon();
-
-function initScrollSuave() {
-  const links = document.querySelectorAll('.js-menu a[href^="#"]');
-
-  function scrollToSection(event) {
-    event.preventDefault();
-    const href = event.currentTarget.getAttribute("href");
-    const section = document.querySelector(href);
-    section.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
-  }
-
-  links.forEach((link) => {
-    link.addEventListener("click", scrollToSection);
-  });
-}
-
+initTabNav();
 initScrollSuave();
-
-function initAnimacaoScroll() {
-  const sections = document.querySelectorAll(".js-scroll");
-
-  if (sections.length) {
-    const windowMetade = window.innerHeight * 0.8;
-
-    function animaScroll() {
-      sections.forEach((section) => {
-        const sectionTop = section.getBoundingClientRect().top;
-        const isSectionVisible = sectionTop - windowMetade < 0;
-        if (isSectionVisible) {
-          section.classList.add("ativo");
-        }
-      });
-    }
-    animaScroll();
-    window.addEventListener("scroll", animaScroll);
-  }
-}
-
 initAnimacaoScroll();
+initModal();
+initDropdownMenu();
+initMenuMobile();
+initFuncionamento();
+initFetchAnimais();
+initBtcPreco();

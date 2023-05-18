@@ -1,0 +1,29 @@
+{
+  "name": "protecao-alada-projeto",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode development --watch",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diegobomfimx/protecaoalada.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/diegobomfimx/protecaoalada/issues"
+  },
+  "homepage": "https://github.com/diegobomfimx/protecaoalada#readme",
+  "devDependencies": {
+    "@babel/core": "^7.21.8",
+    "@babel/plugin-transform-runtime": "^7.21.4",
+    "@babel/preset-env": "^7.21.5",
+    "babel-loader": "^9.1.2",
+    "eslint": "^8.40.0",
+    "webpack": "^5.83.1",
+    "webpack-cli": "^5.1.1"
+  }
+}

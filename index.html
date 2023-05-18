@@ -13,101 +13,133 @@
 </head>
 
 <body>
-  <nav class="menu js-menu" id="animais">
-    <ul>
-      <li><a href="#animais">Aves</a></li>
-      <li><a href="#faq">FAQ</a></li>
-      <li><a href="#contato">Contato</a></li>
-      <li><a href="https://www.origamid.com/">Dev →</a></li>
-    </ul>
-  </nav>
-  <section class="grid-section aves" id="aves">
-    <h1 class="titulo">Proteção Alada</h1>
-    <ul class="aves-lista js-tabmenu">
-      <li><img src="./img/img1.jpg" alt=""></li>
-      <li><img src="./img/img2.jpg" alt=""></li>
-      <li><img src="./img/img3.jpg" alt=""></li>
-      <li><img src="./img/img4.jpg" alt=""></li>
-      <li><img src="./img/img5.jpg" alt=""></li>
-      <li><img src="./img/img6.jpg" alt=""></li>
+  <div class="grid-container">
+    <nav class="menu" data-menu="suave" id="animais">
+      <button data-menu="button" aria-expanded="false" aria-controls="menu">Menu</button>
+      <ul data-menu="list" id="menu">
+        <li><a href="#animais">Aves</a></li>
+        <li data-dropdown><a href="sobre.html">sobre</a>
+          <ul class="dropdown-menu">
+            <li><a href="empresa.html">A Empresa</a></li>
+            <li><a href="equipe.html">Equipe</a></li>
+            <li><a href="socios.html">Sócios</a></li>
+            <li><a href="investidores.html">Investidores</a></li>
+          </ul>
+        </li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contato">Contato</a></li>
+        <li><a data-modal="abrir" href="https://www.origamid.com/">Login →</a></li>
+      </ul>
+    </nav>
+    <section class="grid-section aves" id="aves">
+      <h1 class="titulo">Proteção Alada</h1>
+      <ul class="aves-lista" data-tab="menu">
+        <li><img src="./img/img1.jpg" alt=""></li>
+        <li><img src="./img/img2.jpg" alt=""></li>
+        <li><img src="./img/img3.jpg" alt=""></li>
+        <li><img src="./img/img4.jpg" alt=""></li>
+        <li><img src="./img/img5.jpg" alt=""></li>
+        <li><img src="./img/img6.jpg" alt=""></li>
 
-    </ul>
-    <div class="aves-descricao js-tabcontent">
-      <section>
-        <h2>Arara</h2>
-        <p>As aves são animais com características únicas, como as penas, asas e bicos sem dentes. Elas são encontradas em todos os continentes e possuem uma grande diversidade de espécies.</p>
-        <p>As aves possuem uma grande variedade de tamanhos, formas e cores, desde pequenos beija-flores até grandes aves de rapina. Elas desempenham importantes funções no ecossistema, como polinização, dispersão de sementes e controle de pragas.</p>
-        <p>As aves também são valorizadas por sua beleza e canto. Muitas espécies são apreciadas por sua plumagem colorida, enquanto outras são conhecidas por seus belos cantos.</p>
-        <p>Infelizmente, muitas espécies de aves estão ameaçadas de extinção devido à perda de habitat e outros fatores humanos. É importante adotar medidas de conservação para proteger essas espécies e garantir a sua preservação no planeta.</p>
-      </section>
+      </ul>
+      <div class="aves-descricao" data-tab="content">
+        <section data-anime="show-right">
+          <h2>Arara</h2>
+          <p>As aves são animais com características únicas, como as penas, asas e bicos sem dentes. Elas são encontradas em todos os continentes e possuem uma grande diversidade de espécies.</p>
+          <p>As aves possuem uma grande variedade de tamanhos, formas e cores, desde pequenos beija-flores até grandes aves de rapina. Elas desempenham importantes funções no ecossistema, como polinização, dispersão de sementes e controle de pragas.</p>
+          <p>As aves também são valorizadas por sua beleza e canto. Muitas espécies são apreciadas por sua plumagem colorida, enquanto outras são conhecidas por seus belos cantos.</p>
+          <p>Infelizmente, muitas espécies de aves estão ameaçadas de extinção devido à perda de habitat e outros fatores humanos. É importante adotar medidas de conservação para proteger essas espécies e garantir a sua preservação no planeta.</p>
+        </section>
 
-      <section>
-        <h2>Coruja</h2>
-        <p>As aves possuem uma grande variedade de tamanhos, formas e cores, desde pequenos beija-flores até grandes aves de rapina. Elas desempenham importantes funções no ecossistema, como polinização, dispersão de sementes e controle de pragas.</p>
-        <p>As aves também são valorizadas por sua beleza e canto. Muitas espécies são apreciadas por sua plumagem colorida, enquanto outras são conhecidas por seus belos cantos.</p>
-        <p>Infelizmente, muitas espécies de aves estão ameaçadas de extinção devido à perda de habitat e outros fatores humanos. É importante adotar medidas de conservação para proteger essas espécies e garantir a sua preservação no planeta.</p>
-      </section>
-      <section>
-        <h2>Flamingo</h2>
-        <p>As aves possuem uma grande variedade de tamanhos, formas e cores, desde pequenos beija-flores até grandes aves de rapina. Elas desempenham importantes funções no ecossistema, como polinização, dispersão de sementes e controle de pragas.</p>
-        <p>As aves também são valorizadas por sua beleza e canto. Muitas espécies são apreciadas por sua plumagem colorida, enquanto outras são conhecidas por seus belos cantos.</p>
-        <p>Infelizmente, muitas espécies de aves estão ameaçadas de extinção devido à perda de habitat e outros fatores humanos. É importante adotar medidas de conservação para proteger essas espécies e garantir a sua preservação no planeta.</p>
-        <p>Infelizmente, muitas espécies de aves estão ameaçadas de extinção devido à perda de habitat e outros fatores humanos.</p>
-      </section>
-      <section>
-        <h2>Tucano</h2>
-        <p>As aves possuem uma grande variedade de tamanhos, formas e cores, desde pequenos beija-flores até grandes aves de rapina. Elas desempenham importantes funções no ecossistema, como polinização, dispersão de sementes e controle de pragas.</p>
-        <p>As aves também são valorizadas por sua beleza e canto. Muitas espécies são apreciadas por sua plumagem colorida, enquanto outras são conhecidas por seus belos cantos.</p>
-        <p>Infelizmente, muitas espécies de aves estão ameaçadas de extinção devido à perda de habitat e outros fatores humanos. É importante adotar medidas de conservação para proteger essas espécies e garantir a sua preservação no planeta.</p>
-        <p>Infelizmente, muitas espécies de aves estão ameaçadas de extinção devido à perda de habitat e outros fatores humanos. É importante adotar medidas de conservação para proteger essas espécies e garantir a sua preservação no planeta.</p>
-      </section>
-      <section>
-        <h2>Passáro</h2>
-        <p>As aves possuem uma grande variedade de tamanhos, formas e cores, desde pequenos beija-flores até grandes aves de rapina. Elas desempenham importantes funções no ecossistema, como polinização, dispersão de sementes e controle de pragas.</p>
-        <p>As aves também são valorizadas por sua beleza e canto. Muitas espécies são apreciadas por sua plumagem colorida, enquanto outras são conhecidas por seus belos cantos.</p>
-        <p>Infelizmente, muitas espécies de aves estão ameaçadas de extinção devido à perda de habitat e outros fatores humanos. É importante adotar medidas de conservação para proteger essas espécies e garantir a sua preservação no planeta.</p>
+        <section data-anime="show-right">
+          <h2>Coruja</h2>
+          <p>As aves possuem uma grande variedade de tamanhos, formas e cores, desde pequenos beija-flores até grandes aves de rapina. Elas desempenham importantes funções no ecossistema, como polinização, dispersão de sementes e controle de pragas.</p>
+          <p>As aves também são valorizadas por sua beleza e canto. Muitas espécies são apreciadas por sua plumagem colorida, enquanto outras são conhecidas por seus belos cantos.</p>
+          <p>Infelizmente, muitas espécies de aves estão ameaçadas de extinção devido à perda de habitat e outros fatores humanos. É importante adotar medidas de conservação para proteger essas espécies e garantir a sua preservação no planeta.</p>
+        </section>
+        <section data-anime="show-down">
+          <h2>Flamingo</h2>
+          <p>As aves possuem uma grande variedade de tamanhos, formas e cores, desde pequenos beija-flores até grandes aves de rapina. Elas desempenham importantes funções no ecossistema, como polinização, dispersão de sementes e controle de pragas.</p>
+          <p>As aves também são valorizadas por sua beleza e canto. Muitas espécies são apreciadas por sua plumagem colorida, enquanto outras são conhecidas por seus belos cantos.</p>
+          <p>Infelizmente, muitas espécies de aves estão ameaçadas de extinção devido à perda de habitat e outros fatores humanos. É importante adotar medidas de conservação para proteger essas espécies e garantir a sua preservação no planeta.</p>
+          <p>Infelizmente, muitas espécies de aves estão ameaçadas de extinção devido à perda de habitat e outros fatores humanos.</p>
+        </section>
+        <section data-anime="show-down">
+          <h2>Tucano</h2>
+          <p>As aves possuem uma grande variedade de tamanhos, formas e cores, desde pequenos beija-flores até grandes aves de rapina. Elas desempenham importantes funções no ecossistema, como polinização, dispersão de sementes e controle de pragas.</p>
+          <p>As aves também são valorizadas por sua beleza e canto. Muitas espécies são apreciadas por sua plumagem colorida, enquanto outras são conhecidas por seus belos cantos.</p>
+          <p>Infelizmente, muitas espécies de aves estão ameaçadas de extinção devido à perda de habitat e outros fatores humanos. É importante adotar medidas de conservação para proteger essas espécies e garantir a sua preservação no planeta.</p>
+          <p>Infelizmente, muitas espécies de aves estão ameaçadas de extinção devido à perda de habitat e outros fatores humanos. É importante adotar medidas de conservação para proteger essas espécies e garantir a sua preservação no planeta.</p>
+        </section>
+        <section data-anime="show-right">
+          <h2>Passáro</h2>
+          <p>As aves possuem uma grande variedade de tamanhos, formas e cores, desde pequenos beija-flores até grandes aves de rapina. Elas desempenham importantes funções no ecossistema, como polinização, dispersão de sementes e controle de pragas.</p>
+          <p>As aves também são valorizadas por sua beleza e canto. Muitas espécies são apreciadas por sua plumagem colorida, enquanto outras são conhecidas por seus belos cantos.</p>
+          <p>Infelizmente, muitas espécies de aves estão ameaçadas de extinção devido à perda de habitat e outros fatores humanos. É importante adotar medidas de conservação para proteger essas espécies e garantir a sua preservação no planeta.</p>
 
-      </section>
-      <section>
-        <h2>Falcão</h2>
-        <p>As aves possuem uma grande variedade de tamanhos, formas e cores, desde pequenos beija-flores até grandes aves de rapina. Elas desempenham importantes funções no ecossistema, como polinização, dispersão de sementes e controle de pragas.</p>
-        <p>As aves também são valorizadas por sua beleza e canto. Muitas espécies são apreciadas por sua plumagem colorida, enquanto outras são conhecidas por seus belos cantos.</p>
-        <p>Infelizmente, muitas espécies de aves estão ameaçadas de extinção devido à perda de habitat e outros fatores humanos. É importante adotar medidas de conservação para proteger essas espécies e garantir a sua preservação no planeta.</p>
-        <p>Infelizmente, muitas espécies de aves estão ameaçadas de extinção devido à perda de habitat e outros fatores humanos. É importante adotar medidas de conservação para proteger essas espécies e garantir a sua preservação no planeta.</p>
-      </section>
+        </section>
+        <section data-anime="show-right">
+          <h2>Falcão</h2>
+          <p>As aves possuem uma grande variedade de tamanhos, formas e cores, desde pequenos beija-flores até grandes aves de rapina. Elas desempenham importantes funções no ecossistema, como polinização, dispersão de sementes e controle de pragas.</p>
+          <p>As aves também são valorizadas por sua beleza e canto. Muitas espécies são apreciadas por sua plumagem colorida, enquanto outras são conhecidas por seus belos cantos.</p>
+          <p>Infelizmente, muitas espécies de aves estão ameaçadas de extinção devido à perda de habitat e outros fatores humanos. É importante adotar medidas de conservação para proteger essas espécies e garantir a sua preservação no planeta.</p>
+          <p>Infelizmente, muitas espécies de aves estão ameaçadas de extinção devido à perda de habitat e outros fatores humanos. É importante adotar medidas de conservação para proteger essas espécies e garantir a sua preservação no planeta.</p>
+        </section>
+      </div>
+    </section>
+
+    <section class="grid-section faq" data-anime="acordeon" data-anime="scroll" id="faq">
+      <h1 class="titulo">FAQ</h1>
+      <dl class="faq-lista">
+        <dt>Qual a idade das aves?</dt>
+        <dd>A idade das aves varia de acordo com a espécie. Algumas aves têm uma vida bastante curta, como as araras-azuis de pequeno porte, como a ararinha-azul, que podem viver entre 10 e 15 anos. Já as araras maiores, como a arara-azul-grande, podem viver até 50 anos em cativeiro, enquanto outras espécies de aves podem viver ainda mais tempo.</dd>
+        <dt>Por que são alados?</dt>
+        <dd>As aves são animais alados porque possuem estruturas únicas e adaptadas para o voo. Suas asas são compostas por penas que formam uma superfície plana que pode produzir força de sustentação e impulso para o voo.</dd>
+        <dt>Qual a diferença de aves que voam e as que não voam?</dt>
+        <dd>A principal diferença entre as aves que voam e as que não voam é a capacidade de sustentação no ar. As aves que voam têm uma série de adaptações anatômicas e fisiológicas que permitem o voo, como asas desenvolvidas, ossos pneumáticos e um sistema respiratório altamente eficiente.</dd>
+        <dt>Como proteger as aves?</dt>
+        <dd>Uma maneira de proteger as aves é preservando seu habitat natural, evitando o uso de pesticidas, instalando alimentadores de aves, colocando adesivos nas janelas e apoiando organizações de conservação.</dd>
+      </dl>
+    </section>
+    <section class="grid-section numeros" data-anime="scroll">
+      <h1 class="titulo h1-grande">Aves resgatadas</h1>
+      <div class="numeros-grid">
+
+      </div>
+    </section>
+    <section class="grid-section contato" data-anime="scroll" id="contato">
+      <h1 class="titulo">Contato</h1>
+      <div class="mapa">
+        <img src="./img/mapa.png" alt="">
+      </div>
+      <ul class="dados">
+        <li>contato@protecaoalada.com</li>
+        <li>+55 (71) 9999-9999</li>
+        <li>Rua Ali Perto, n° 50</li>
+        <li>Salvador - BA</li>
+        <li>Doe <span class="btc-preco"></span> bitcoin para nos ajudar</li>
+        <li data-semana="1,2,3,4,5" data-horario="8,18">Seg à Sex das 08h às 18h</li>
+
+      </ul>
+    </section>
+    <footer class="copy">
+      <p>&copy; Todos os direitos reservados</p>
+    </footer>
+  </div>
+  <section class="modal-container" data-modal="container">
+    <div class="modal">
+      <button data-modal="fechar" class="fechar">X</button>
+      <form action="">
+        <label for="email">Email</label>
+        <input type="text" for="email" id="email">
+
+        <label for="senha">Senha</label>
+        <input type="password" for="senha" id="senha">
+        <button type="submit">Entrar</button>
+      </form>
     </div>
   </section>
-
-  <section class="grid-section faq js-acordeon js-scroll" id="faq">
-    <h1 class="titulo">FAQ</h1>
-    <dl class="faq-lista">
-      <dt>Qual a idade das aves?</dt>
-      <dd>A idade das aves varia de acordo com a espécie. Algumas aves têm uma vida bastante curta, como as araras-azuis de pequeno porte, como a ararinha-azul, que podem viver entre 10 e 15 anos. Já as araras maiores, como a arara-azul-grande, podem viver até 50 anos em cativeiro, enquanto outras espécies de aves podem viver ainda mais tempo.</dd>
-      <dt>Por que são alados?</dt>
-      <dd>As aves são animais alados porque possuem estruturas únicas e adaptadas para o voo. Suas asas são compostas por penas que formam uma superfície plana que pode produzir força de sustentação e impulso para o voo.</dd>
-      <dt>Qual a diferença de aves que voam e as que não voam?</dt>
-      <dd>A principal diferença entre as aves que voam e as que não voam é a capacidade de sustentação no ar. As aves que voam têm uma série de adaptações anatômicas e fisiológicas que permitem o voo, como asas desenvolvidas, ossos pneumáticos e um sistema respiratório altamente eficiente.</dd>
-      <dt>Como proteger as aves?</dt>
-      <dd>Uma maneira de proteger as aves é preservando seu habitat natural, evitando o uso de pesticidas, instalando alimentadores de aves, colocando adesivos nas janelas e apoiando organizações de conservação.</dd>
-    </dl>
-  </section>
-
-  <section class="grid-section contato js-scroll" id="contato">
-    <h1 class="titulo">Contato</h1>
-    <div class="mapa">
-      <img src="./img/mapa.png" alt="">
-    </div>
-    <ul class="dados">
-      <li>contato@protecaoalada.com</li>
-      <li>+55 (71) 9999-9999</li>
-      <li>Rua Ali Perto, n° 50</li>
-      <li>Salvador - BA</li>
-    </ul>
-  </section>
-  <footer class="copy">
-    <p>&copy; Todos os direitos reservados</p>
-  </footer>
-  <script src="./js/script.js"></script>
+  <script src="./main.js"></script>
 </body>
 
 </html>
