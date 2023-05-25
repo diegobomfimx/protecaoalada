@@ -2,7 +2,7 @@ import Acordeon from "./modules/acordeon-anime.js";
 import ScrollSuave from "./modules/scroll-suave.js";
 import TabNav from "./modules/tab-nav.js";
 import Modal from "./modules/modal.js";
-import initDropdownMenu from "./modules/dropdown-menu.js";
+import DropdownMenu from "./modules/dropdown-menu.js";
 import initMenuMobile from "./modules/menu-mobile.js";
 import initFuncionamento from "./modules/funcionamento.js";
 import fetchAnimais from "./modules/fetch-animais.js";
@@ -31,7 +31,9 @@ modal.init();
 const scrollAnima = new ScrollAnima('[data-anime="scroll"]');
 scrollAnima.init();
 
-initDropdownMenu();
+const dropDown = new DropdownMenu("[data-dropdown]");
+dropDown.init();
+
 initMenuMobile();
 initFuncionamento();
 
