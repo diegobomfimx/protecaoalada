@@ -40,6 +40,6 @@ menuMobile.init();
 const horaFuncionamento = new Funcionamento("[data-semana]");
 horaFuncionamento.init();
 
-fetchAnimais("../../animaisapi.json", ".numeros-grid");
+fetchAnimais("./animaisapi.json", ".numeros-grid");
 
 fetchBtcPreco("https://blockchain.info/ticker", ".btc-preco");
