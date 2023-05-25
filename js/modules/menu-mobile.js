@@ -1,18 +1,40 @@
 import clicaFora from "./clica-fora.js";
-export default function initMenuMobile() {
-  const menuButton = document.querySelector('[data-menu="button"]');
-  const menuList = document.querySelector('[data-menu="list"]');
 
-  function openMenu() {
-    menuList.classList.add("active");
-    menuButton.classList.add("active");
-    clicaFora(menuList, ["click", "touchstart"], () => {
-      menuList.classList.remove("active");
-      menuButton.classList.remove("active");
+export default class MenuMobile {
+  constructor(button, menuLista, eventos) {
+    this.menuButton = document.querySelector(button);
+    this.menuList = document.querySelector(menuLista);
+
+    // define touchstart e click como argumento padrão
+    // de events caso o usuário não define
+    if (eventos === undefined) {
+      this.eventos = ["touchstart", "click"];
+    } else {
+      this.eventos = eventos;
+    }
+
+    this.openMenu = this.openMenu.bind(this);
+  }
+
+  openMenu() {
+    this.menuList.classList.add("active");
+    this.menuButton.classList.add("active");
+    clicaFora(this.menuList, this.eventos, () => {
+      this.menuList.classList.remove("active");
+      this.menuButton.classList.remove("active");
     });
   }
 
-  if (menuButton && menuList) {
-    menuButton.addEventListener("click", openMenu);
+  addMenuMobileEvents() {
+    this.eventos.forEach((evento) =>
+      this.menuButton.addEventListener(evento, this.openMenu)
+    );
+  }
+
+  init() {
+    if (this.menuButton && this.menuList) {
+      this.addMenuMobileEvents();
+    }
+    return this;
   }
 }

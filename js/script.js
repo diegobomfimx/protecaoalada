@@ -3,7 +3,7 @@ import ScrollSuave from "./modules/scroll-suave.js";
 import TabNav from "./modules/tab-nav.js";
 import Modal from "./modules/modal.js";
 import DropdownMenu from "./modules/dropdown-menu.js";
-import initMenuMobile from "./modules/menu-mobile.js";
+import MenuMobile from "./modules/menu-mobile.js";
 import initFuncionamento from "./modules/funcionamento.js";
 import fetchAnimais from "./modules/fetch-animais.js";
 import fetchBtcPreco from "./modules/fetch-bitcoin.js";
@@ -34,7 +34,9 @@ scrollAnima.init();
 const dropDown = new DropdownMenu("[data-dropdown]");
 dropDown.init();
 
-initMenuMobile();
+const menuMobile = new MenuMobile('[data-menu="button"]', '[data-menu="list"]');
+menuMobile.init();
+
 initFuncionamento();
 
 fetchAnimais("../../animaisapi.json", ".numeros-grid");
