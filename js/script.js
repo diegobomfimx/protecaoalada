@@ -8,6 +8,7 @@ import Funcionamento from "./modules/funcionamento.js";
 import fetchAnimais from "./modules/fetch-animais.js";
 import fetchBtcPreco from "./modules/fetch-bitcoin.js";
 import ScrollAnima from "./modules/scroll-anima.js";
+import SlideNav from "./modules/slide.js";
 
 const scrollSuave = new ScrollSuave('[data-menu="suave"] a[href^="#"]');
 scrollSuave.init();
@@ -43,3 +44,7 @@ horaFuncionamento.init();
 fetchAnimais("./animaisapi.json", ".numeros-grid");
 
 fetchBtcPreco("https://blockchain.info/ticker", ".btc-preco");
+
+const novoSlide = new SlideNav(".slide", ".slide-wrapper");
+novoSlide.init();
+novoSlide.addControl(".custom-controls");
